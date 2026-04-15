@@ -1,0 +1,6 @@
+interface:
+  display_name: "Js.org"
+  short_description: "Repo-specific patterns and workflows for js.org"
+  default_prompt: "Use the js.org repo skill to follow existing architecture, testing, and workflow conventions."
+policy:
+  allow_implicit_invocation: true
