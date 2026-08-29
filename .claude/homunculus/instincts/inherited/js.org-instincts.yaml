@@ -1,0 +1,439 @@
+# Instincts generated from https://github.com/WangNingkai/js.org
+# Generated: 2026-03-26T15:40:14.546Z
+# Version: 2.0
+# NOTE: This file supplements (does not replace) any existing curated instincts.
+# High-confidence manually curated instincts should be preserved alongside these.
+
+---
+id: js.org-commit-length
+trigger: "when writing a commit message"
+confidence: 0.6
+domain: git
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/js.org
+---
+
+# Js.org Commit Length
+
+## Action
+
+Keep commit messages concise (~39 characters)
+
+## Evidence
+
+- Average commit message length: 39 chars
+- Based on 200 commits
+
+---
+id: js.org-naming-files
+trigger: "when creating a new file"
+confidence: 0.8
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/js.org
+---
+
+# Js.org Naming Files
+
+## Action
+
+Use snake_case naming convention
+
+## Evidence
+
+- Analyzed file naming patterns in repository
+- Dominant pattern: snake_case
+
+---
+id: js.org-import-relative
+trigger: "when importing modules"
+confidence: 0.75
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/js.org
+---
+
+# Js.org Import Relative
+
+## Action
+
+Use relative imports for project files
+
+## Evidence
+
+- Import analysis shows relative import pattern
+- Example: import { x } from '../lib/x'
+
+---
+id: js.org-export-style
+trigger: "when exporting from a module"
+confidence: 0.7
+domain: code-style
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/js.org
+---
+
+# Js.org Export Style
+
+## Action
+
+Prefer named exports
+
+## Evidence
+
+- Export pattern analysis
+- Dominant style: named
+
+---
+id: js.org-test-separate
+trigger: "when writing tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/js.org
+---
+
+# Js.org Test Separate
+
+## Action
+
+Place tests in the tests/ or __tests__/ directory, mirroring src structure
+
+## Evidence
+
+- Separate test directory pattern detected
+- Tests live in dedicated test folders
+
+---
+id: js.org-workflow-feature-development
+trigger: "when implementing a new feature"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/js.org
+---
+
+# Js.org Workflow Feature Development
+
+## Action
+
+Follow the feature-development workflow:
+1. Add feature implementation
+2. Add tests for feature
+3. Update documentation
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~12x per month
+- Files: 
+
+---
+id: js.org-workflow-add-new-js-org-subdomain
+trigger: "when doing add new js org subdomain"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/js.org
+---
+
+# Js.org Workflow Add New Js Org Subdomain
+
+## Action
+
+Follow the add-new-js-org-subdomain workflow:
+1. Edit cnames_active.js to add a new entry for the requested subdomain.
+2. Open a pull request with the change.
+3. Merge the pull request after review.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~20x per month
+- Files: cnames_active.js
+
+---
+id: js.org-workflow-update-github-actions-workflows
+trigger: "when doing update github actions workflows"
+confidence: 0.65
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/js.org
+---
+
+# Js.org Workflow Update Github Actions Workflows
+
+## Action
+
+Follow the update-github-actions-workflows workflow:
+1. Edit one or more workflow YAML files in .github/workflows (e.g., comment.yml, validate.yml).
+2. Optionally update PULL_REQUEST_TEMPLATE.md if related to PR validation.
+3. Open a pull request with the changes.
+4. Merge the pull request after review.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~3x per month
+- Files: .github/workflows/comment.yml, .github/workflows/validate.yml, PULL_REQUEST_TEMPLATE.md
+
+---
+id: js.org-workflow-merge-main-into-feature-branch
+trigger: "when doing merge main into feature branch"
+confidence: 0.75
+domain: workflow
+source: repo-analysis
+source_repo: https://github.com/WangNingkai/js.org
+---
+
+# Js.org Workflow Merge Main Into Feature Branch
+
+## Action
+
+Follow the merge-main-into-feature-branch workflow:
+1. Merge master into the feature or patch branch.
+2. Resolve any conflicts if necessary.
+3. Push the updated branch.
+
+## Evidence
+
+- Workflow detected from commit patterns
+- Frequency: ~5x per month
+- Files: cnames_active.js, .github/workflows/comment.yml, .github/workflows/validate.yml
+
+---
+id: js.org-file-naming-snake-case
+trigger: "When creating or renaming a file"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: WangNingkai/js.org
+---
+
+# Js.org File Naming Snake Case
+
+## Action
+
+Use snake_case for file names
+
+## Evidence
+
+- Pattern in cnames_active.js
+- No evidence of camelCase or PascalCase files
+
+---
+id: js.org-function-naming-camel-case
+trigger: "When defining a function"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: WangNingkai/js.org
+---
+
+# Js.org Function Naming Camel Case
+
+## Action
+
+Name the function using camelCase
+
+## Evidence
+
+- Naming convention specified in analysis
+
+---
+id: js.org-class-naming-pascal-case
+trigger: "When defining a class"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: WangNingkai/js.org
+---
+
+# Js.org Class Naming Pascal Case
+
+## Action
+
+Name the class using PascalCase
+
+## Evidence
+
+- Naming convention specified in analysis
+
+---
+id: js.org-constant-naming-screaming-snake-case
+trigger: "When defining a constant"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: WangNingkai/js.org
+---
+
+# Js.org Constant Naming Screaming Snake Case
+
+## Action
+
+Name the constant using SCREAMING_SNAKE_CASE
+
+## Evidence
+
+- Naming convention specified in analysis
+
+---
+id: js.org-import-style-relative
+trigger: "When importing modules"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: WangNingkai/js.org
+---
+
+# Js.org Import Style Relative
+
+## Action
+
+Use relative import paths
+
+## Evidence
+
+- Import style specified as relative in analysis
+
+---
+id: js.org-export-style-named
+trigger: "When exporting modules or functions"
+confidence: 0.9
+domain: code-style
+source: repo-analysis
+source_repo: WangNingkai/js.org
+---
+
+# Js.org Export Style Named
+
+## Action
+
+Use named exports
+
+## Evidence
+
+- Export style specified as named in analysis
+
+---
+id: js.org-testing-location-separate
+trigger: "When adding tests"
+confidence: 0.8
+domain: testing
+source: repo-analysis
+source_repo: WangNingkai/js.org
+---
+
+# Js.org Testing Location Separate
+
+## Action
+
+Place test files in a separate location from source files
+
+## Evidence
+
+- Test location specified as separate in architecture analysis
+
+---
+id: js.org-commit-format-freeform
+trigger: "When writing a commit message"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: WangNingkai/js.org
+---
+
+# Js.org Commit Format Freeform
+
+## Action
+
+Use a freeform commit message, optionally starting with a type prefix (e.g., 'update:', 'chore:', 'feat:', 'Fix:')
+
+## Evidence
+
+- Seen in commit 'update: cnames_active.js'
+- Seen in commit 'chore: reorder lines alphabetically (a–z)'
+- Seen in commit 'feat: add in workbee'
+- Seen in commit 'Fix: place nextqr in correct alphabetical order (after nextkit-fetcher)'
+
+---
+id: js.org-commit-merge-main
+trigger: "When synchronizing a feature or patch branch with master"
+confidence: 0.8
+domain: git
+source: repo-analysis
+source_repo: WangNingkai/js.org
+---
+
+# Js.org Commit Merge Main
+
+## Action
+
+Use a commit message starting with 'Merge branch 'master' into ...' or 'Merge pull request ...'
+
+## Evidence
+
+- Seen in commit 'Merge branch 'master' into master'
+- Seen in commit 'Merge pull request #10922 from bansal/master'
+
+---
+id: js.org-workflow-add-subdomain
+trigger: "When someone wants to register a new js.org subdomain for their project"
+confidence: 0.99
+domain: workflow
+source: repo-analysis
+source_repo: WangNingkai/js.org
+---
+
+# Js.org Workflow Add Subdomain
+
+## Action
+
+Edit cnames_active.js to add the new subdomain, open a pull request, and merge after review
+
+## Evidence
+
+- Workflow 'add-new-js-org-subdomain' documented
+- Seen in commit 'Edit cnames_active.js to add a new entry for the requested subdomain.'
+
+---
+id: js.org-workflow-update-github-actions
+trigger: "When someone wants to improve, split, or fix CI/CD workflows"
+confidence: 0.9
+domain: workflow
+source: repo-analysis
+source_repo: WangNingkai/js.org
+---
+
+# Js.org Workflow Update Github Actions
+
+## Action
+
+Edit workflow YAML files in .github/workflows, optionally update PULL_REQUEST_TEMPLATE.md, open a pull request, and merge after review
+
+## Evidence
+
+- Workflow 'update-github-actions-workflows' documented
+- Pattern in files .github/workflows/comment.yml, .github/workflows/validate.yml
+
+---
+id: js.org-workflow-merge-main-into-feature
+trigger: "When a contributor needs to bring their branch up to date with the latest master changes before merging"
+confidence: 0.8
+domain: workflow
+source: repo-analysis
+source_repo: WangNingkai/js.org
+---
+
+# Js.org Workflow Merge Main Into Feature
+
+## Action
+
+Merge master into the feature or patch branch, resolve conflicts if necessary, and push the updated branch
+
+## Evidence
+
+- Workflow 'merge-main-into-feature-branch' documented
+- Seen in commit 'Merge branch 'master' into master'
+
